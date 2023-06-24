@@ -25,7 +25,7 @@ const SignInPage = (props: Props) => {
 
   return (
     <>
-      <PageTitle children="Sign In" />
+      <PageTitle>Sign In</PageTitle>
 
       <div>
         <form action="">
