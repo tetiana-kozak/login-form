@@ -1,0 +1,41 @@
+@import 'variables';
+
+.MuiInputLabel-root {
+  color: $White;
+  font-size: 14px;
+  line-height: 155%;
+  font-family: 'Montserrat', sans-serif;
+
+  &.Mui-focused {
+    color: $White;
+  }
+}
+
+.MuiInput-root {
+  color: $White;
+  opacity: 0.7;
+  line-height: 155%;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+
+  &::before {
+    border-bottom: 1px solid $White;
+  }
+
+  &::after {
+    border-bottom: 2px solid $White;
+  }
+
+  &:hover:not(.Mui-disabled, .Mui-error):before {
+    border-bottom: 1px $White solid;
+  }
+}
+
+.account-message {
+  color: $BRG;
+  font-size: 12px;
+  text-align: center;
+  span {
+    color: $Blue;
+  }
+}

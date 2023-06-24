@@ -1,10 +1,12 @@
-import Header from '../Header/Header'
+import Header from 'container/Header/Header'
+import Main from 'container/Main/Main'
 
 type Props = {}
 const App = (props: Props) => {
   return (
     <>
       <Header />
+      <Main />
     </>
   )
 }
