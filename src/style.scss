@@ -1,10 +1,17 @@
-@import './variables';
+@import 'variables';
 
 * {
   font-family: 'Montserrat', sans-serif;
+}
+
+html {
   background-color: $Black;
 }
 
 .container {
   padding: 0 48px;
+}
+
+.main {
+  margin-bottom: 48px;
 }
