@@ -6,7 +6,7 @@ type Props = {}
 const Header = (props: Props) => {
   return (
     <header>
-      <Container>
+      <Container className="container">
         <div className="header-logo">
           <h3 className="header-title">InCode</h3>
           <h5 className="header-subtitle">Finance</h5>

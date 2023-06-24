@@ -1,6 +1,7 @@
 @import './../../variables';
 
 .header-logo {
+  margin-top: 48px;
   .header-title {
     color: $White;
     font-size: 36px;
@@ -9,7 +10,6 @@
   }
   .header-subtitle {
     color: $Greener;
-    // font-size: 16px;
     font-weight: 600;
     line-height: 155%;
   }
