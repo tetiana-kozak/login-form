@@ -15,3 +15,10 @@ html {
 .main {
   margin-bottom: 48px;
 }
+
+@media (min-width: 450px) {
+  main .container {
+    max-width: 350px;
+    padding: 0;
+  }
+}
