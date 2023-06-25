@@ -26,7 +26,7 @@ const SignUpPage = (props: Props) => {
     console.log('event', event.target.value)
   }
   return (
-    <>
+    <div className="form-container">
       <PageTitle>Sign Up</PageTitle>
 
       <div>
@@ -107,7 +107,7 @@ const SignUpPage = (props: Props) => {
           I have an account. <span>Go to Sign in</span>
         </p>
       </div>
-    </>
+    </div>
   )
 }
 export default SignUpPage

@@ -24,7 +24,7 @@ const SignInPage = (props: Props) => {
   }
 
   return (
-    <>
+    <div className="form-container">
       <PageTitle>Sign In</PageTitle>
 
       <div>
@@ -69,7 +69,7 @@ const SignInPage = (props: Props) => {
           Don’t have account yet? <span>New Account</span>
         </p>
       </div>
-    </>
+    </div>
   )
 }
 export default SignInPage
