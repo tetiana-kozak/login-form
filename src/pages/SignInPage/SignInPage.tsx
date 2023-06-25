@@ -17,7 +17,7 @@ type Props = {}
 const SignInPage = (props: Props) => {
   const [showPassword, setShowPassword] = useState(false)
 
-  const handleClickShowPassword = () => setShowPassword((show) => !show)
+  const handleShowPassword = () => setShowPassword((show) => !show)
 
   const handleFormData = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log('event', event.target.value)
@@ -30,9 +30,9 @@ const SignInPage = (props: Props) => {
       <div>
         <form action="">
           <FormControl variant="standard" margin="normal" fullWidth>
-            <InputLabel htmlFor="name-input">User Name</InputLabel>
+            <InputLabel htmlFor="user-name-input">User Name</InputLabel>
             <Input
-              id="name-input"
+              id="user-name-input"
               placeholder="Example123"
               onChange={handleFormData}
               type="text"
@@ -50,7 +50,7 @@ const SignInPage = (props: Props) => {
                 <InputAdornment position="end">
                   <IconButton
                     aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
+                    onClick={handleShowPassword}
                   >
                     {showPassword ? (
                       <img src={iconOff} alt="" />
