@@ -1,8 +1,8 @@
-import LogOutButton from 'components/Buttons/LogOutButton/LogOutButton'
 import PageTitle from 'components/Title/PageTitle'
 import vectorImg from 'assets/Vector.svg'
 import decor from 'assets/Decor.svg'
 import 'pages/Pages.scss'
+import Button from 'components/Button/Button'
 
 type Props = {}
 const MainPage = (props: Props) => {
@@ -22,7 +22,9 @@ const MainPage = (props: Props) => {
           feedback on the result of your work
         </p>
 
-        <LogOutButton />
+        <div>
+          <Button>Log Out</Button>
+        </div>
       </div>
       <img src={vectorImg} alt="Congratulations" className="image" />
     </>
