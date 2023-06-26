@@ -44,3 +44,39 @@
   max-width: 350px;
   margin: 0 auto;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main-description {
+    font-weight: 600;
+    line-height: 155%;
+    max-width: 466px;
+    color: $White;
+  }
+}
+
+.horisontal-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+  max-width: 341px;
+  width: 100%;
+}
+
+.decor {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 237px;
+  height: 188px;
+  top: -115px;
+  right: -115px;
+}
