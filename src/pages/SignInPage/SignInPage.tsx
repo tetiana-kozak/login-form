@@ -29,14 +29,14 @@ const SignInPage = (props: Props) => {
             <TextInput
               name={'email'}
               id={'email-input'}
-              label={'Email'}
+              label={'Email *'}
               placeholder={'example@gmail.com'}
             />
 
             <PasswordInput
               name={'password'}
               id={'password-input'}
-              label={'Password'}
+              label={'Password *'}
               placeholder={'***************'}
             />
 

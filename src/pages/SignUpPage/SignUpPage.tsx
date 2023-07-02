@@ -32,35 +32,35 @@ const SignUpPage = (props: Props) => {
             <TextInput
               name={'fullName'}
               id={'full-name-input'}
-              label={'Full Name'}
+              label={'Full Name *'}
               placeholder={'Example Name'}
             />
 
             <TextInput
               name={'userName'}
               id={'user-name-input'}
-              label={'User Name'}
+              label={'User Name *'}
               placeholder={'Example123'}
             />
 
             <TextInput
               name={'email'}
               id={'email-input'}
-              label={'Email'}
+              label={'Email *'}
               placeholder={'example@gmail.com'}
             />
 
             <PasswordInput
               name={'password'}
               id={'password-input'}
-              label={'Password'}
+              label={'Password *'}
               placeholder={'***************'}
             />
 
             <PasswordInput
               name={'confirmedPassword'}
               id={'confirmed-password-input'}
-              label={'Confirm Password'}
+              label={'Confirm Password *'}
               placeholder={'***************'}
             />
 
