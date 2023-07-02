@@ -2,11 +2,17 @@ import PageTitle from 'components/Title/PageTitle'
 import vectorImg from 'assets/Vector.svg'
 import decor from 'assets/Decor.svg'
 import 'pages/Pages.scss'
-import Button from 'components/Button/Button'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 const MainPage = (props: Props) => {
+  let navigate = useNavigate()
+
+  const logOut = () => {
+    navigate('/sign-in')
+    localStorage.removeItem('token')
+  }
+
   return (
     <>
       <div className="main-container horisontal-gap">
@@ -24,9 +30,9 @@ const MainPage = (props: Props) => {
         </p>
 
         <div>
-          <Link to={'/sign-in'}>
-            <Button>Log Out</Button>
-          </Link>
+          <button className="button" onClick={logOut}>
+            Log Out
+          </button>
         </div>
       </div>
       <img src={vectorImg} alt="Congratulations" className="image" />
