@@ -37,8 +37,5 @@ export const SignInSchema = Yup.object().shape({
     .required('This field is required!'),
   password: Yup.string()
     .min(3, 'Password must have at least 3 characters!')
-    .matches(passwordRulles, {
-      message: 'Please, create a stronger password!',
-    })
     .required('This field is required!'),
 })
