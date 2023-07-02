@@ -9,14 +9,6 @@ import ProtectedRoute from 'components/ProtectedRoute/ProtectedRoute'
 type Props = {}
 
 const MainRoutes = (props: Props) => {
-  const [isSignedIn, setIsSignedIn] = useState(false)
-
-  const signin = () => {
-    setIsSignedIn(true)
-  }
-  const signout = () => {
-    setIsSignedIn(false)
-  }
   return (
     <Routes>
       <Route path="/" element={<InnerContent />}>
