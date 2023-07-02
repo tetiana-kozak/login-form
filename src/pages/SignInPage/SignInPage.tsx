@@ -17,7 +17,7 @@ const SignInPage = (props: Props) => {
       <div>
         <Formik
           initialValues={{
-            userName: '',
+            email: '',
             password: '',
           }}
           validationSchema={SignInSchema}
@@ -27,10 +27,10 @@ const SignInPage = (props: Props) => {
         >
           <Form>
             <TextInput
-              name={'userName'}
-              id={'user-name-input'}
-              label={'User Name'}
-              placeholder={'Example123'}
+              name={'email'}
+              id={'email-input'}
+              label={'Email'}
+              placeholder={'example@gmail.com'}
             />
 
             <PasswordInput

@@ -19,6 +19,7 @@ const SignUpPage = (props: Props) => {
           initialValues={{
             fullName: '',
             userName: '',
+            email: '',
             password: '',
             confirmedPassword: '',
           }}
@@ -40,6 +41,13 @@ const SignUpPage = (props: Props) => {
               id={'user-name-input'}
               label={'User Name'}
               placeholder={'Example123'}
+            />
+
+            <TextInput
+              name={'email'}
+              id={'email-input'}
+              label={'Email'}
+              placeholder={'example@gmail.com'}
             />
 
             <PasswordInput
