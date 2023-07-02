@@ -10,7 +10,7 @@ const MainRoutes = (props: Props) => {
   return (
     <Routes>
       <Route path="/" element={<InnerContent />}>
-        <Route index element={<MainPage />} />
+        <Route index element={<SignInPage />} />
         <Route path="main" element={<MainPage />} />
         <Route path="sign-in" element={<SignInPage />} />
         <Route path="sign-up" element={<SignUpPage />} />
