@@ -11,6 +11,7 @@ import 'pages/Pages.scss'
 import Button from 'components/Button/Button'
 import iconOff from 'assets/eye-off.svg'
 import iconOn from 'assets/eye-on.svg'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -101,10 +102,15 @@ const SignUpPage = (props: Props) => {
             />
           </FormControl>
 
-          <Button>Sign Up</Button>
+          <Link to={'/sign-up'}>
+            <Button>Sign Up</Button>
+          </Link>
         </form>
         <p className="account-message">
-          I have an account. <span>Go to Sign in</span>
+          I have an account.
+          <span>
+            <Link to={'/sign-in'}>Go to Sign in</Link>
+          </span>
         </p>
       </div>
     </div>

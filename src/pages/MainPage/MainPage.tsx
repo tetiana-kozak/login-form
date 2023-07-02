@@ -3,6 +3,7 @@ import vectorImg from 'assets/Vector.svg'
 import decor from 'assets/Decor.svg'
 import 'pages/Pages.scss'
 import Button from 'components/Button/Button'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 const MainPage = (props: Props) => {
@@ -23,7 +24,9 @@ const MainPage = (props: Props) => {
         </p>
 
         <div>
-          <Button>Log Out</Button>
+          <Link to={'/sign-in'}>
+            <Button>Log Out</Button>
+          </Link>
         </div>
       </div>
       <img src={vectorImg} alt="Congratulations" className="image" />
