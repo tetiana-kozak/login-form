@@ -3,15 +3,34 @@ import MainPage from 'pages/MainPage/MainPage'
 import SignInPage from 'pages/SignInPage/SignInPage'
 import SignUpPage from 'pages/SignUpPage/SignUpPage'
 import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+import ProtectedRoute from 'components/ProtectedRoute/ProtectedRoute'
 
 type Props = {}
 
 const MainRoutes = (props: Props) => {
+  const [isSignedIn, setIsSignedIn] = useState(false)
+
+  const signin = () => {
+    setIsSignedIn(true)
+  }
+  const signout = () => {
+    setIsSignedIn(false)
+  }
   return (
     <Routes>
       <Route path="/" element={<InnerContent />}>
         <Route index element={<SignInPage />} />
-        <Route path="main" element={<MainPage />} />
+
+        <Route
+          path="main"
+          element={
+            <ProtectedRoute>
+              <MainPage />
+            </ProtectedRoute>
+          }
+        />
+
         <Route path="sign-in" element={<SignInPage />} />
         <Route path="sign-up" element={<SignUpPage />} />
       </Route>
