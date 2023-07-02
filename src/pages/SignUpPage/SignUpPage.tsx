@@ -6,10 +6,36 @@ import { Formik, Form } from 'formik'
 import TextInput from 'components/FormInputs/TextInput'
 import PasswordInput from 'components/FormInputs/PasswordInput'
 import { SignUpSchema } from 'Schemas/schemas'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
+type UserData = {
+  fullName: string
+  userName: string
+  email: string
+  password: string
+  confirmedPassword: string
+}
+
 const SignUpPage = (props: Props) => {
+  let navigate = useNavigate()
+
+  const signUp = async (values: UserData) => {
+    await axios
+      .post(
+        'https://jobs-api-06-ivan.herokuapp.com/api/v1/auth/register',
+        values
+      )
+      .then((response) => {
+        console.log('response', response)
+        localStorage.setItem('token', JSON.stringify(response.data.token))
+        navigate('/main')
+      })
+      .catch((error) => console.log('error', error))
+  }
+
   return (
     <div className="form-container">
       <PageTitle>Sign Up</PageTitle>
@@ -24,8 +50,9 @@ const SignUpPage = (props: Props) => {
             confirmedPassword: '',
           }}
           validationSchema={SignUpSchema}
-          onSubmit={(values) => {
-            console.log(values)
+          onSubmit={(values, actions) => {
+            console.log('values => ', values)
+            signUp(values)
           }}
         >
           <Form>
@@ -64,9 +91,7 @@ const SignUpPage = (props: Props) => {
               placeholder={'***************'}
             />
 
-            {/* <Link to={'/sign-up'}> */}
             <Button>Sign Up</Button>
-            {/* </Link> */}
           </Form>
         </Formik>
         <p className="account-message">
