@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import TextInput from 'components/FormInputs/TextInput'
 import { Formik, Form } from 'formik'
 import PasswordInput from 'components/FormInputs/PasswordInput'
+import { SignInSchema } from 'Schemas/schemas'
 
 type Props = {}
 
@@ -19,6 +20,7 @@ const SignInPage = (props: Props) => {
             userName: '',
             password: '',
           }}
+          validationSchema={SignInSchema}
           onSubmit={(values) => {
             console.log(values)
           }}

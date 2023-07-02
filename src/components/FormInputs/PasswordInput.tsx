@@ -1,5 +1,6 @@
 import {
   FormControl,
+  FormHelperText,
   IconButton,
   Input,
   InputAdornment,
@@ -24,7 +25,12 @@ const PasswordInput = ({ label, id, ...props }: Props) => {
   const [field, meta] = useField(props)
 
   return (
-    <FormControl variant="standard" margin="normal" fullWidth>
+    <FormControl
+      variant="standard"
+      margin="normal"
+      fullWidth
+      className="relative"
+    >
       <InputLabel htmlFor={id}>{label}</InputLabel>
       <Input
         id={id}
@@ -47,7 +53,7 @@ const PasswordInput = ({ label, id, ...props }: Props) => {
         }
       />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <FormHelperText className="error">{meta.error}</FormHelperText>
       ) : null}
     </FormControl>
   )

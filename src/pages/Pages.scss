@@ -83,7 +83,14 @@
   right: -115px;
 }
 
+.relative {
+  position: relative;
+}
+
 .error {
+  position: absolute;
+  top: 45px;
+  left: 0;
   font-size: 12px;
   color: red;
   margin-top: 0.25rem;

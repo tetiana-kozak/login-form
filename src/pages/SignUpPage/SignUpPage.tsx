@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import PageTitle from 'components/Title/PageTitle'
 import 'pages/Pages.scss'
 import Button from 'components/Button/Button'
@@ -6,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { Formik, Form } from 'formik'
 import TextInput from 'components/FormInputs/TextInput'
 import PasswordInput from 'components/FormInputs/PasswordInput'
+import { SignUpSchema } from 'Schemas/schemas'
 
 type Props = {}
 
@@ -22,6 +22,7 @@ const SignUpPage = (props: Props) => {
             password: '',
             confirmedPassword: '',
           }}
+          validationSchema={SignUpSchema}
           onSubmit={(values) => {
             console.log(values)
           }}
