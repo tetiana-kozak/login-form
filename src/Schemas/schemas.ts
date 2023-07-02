@@ -17,7 +17,7 @@ export const SignUpSchema = Yup.object().shape({
     .matches(emailRulles, {
       message: 'Please, enter a valid email!',
     })
-    .required('Required'),
+    .required('This field is required!'),
   password: Yup.string()
     .min(3, 'Password must have at least 3 characters!')
     .matches(passwordRulles, {
@@ -34,7 +34,7 @@ export const SignInSchema = Yup.object().shape({
     .matches(emailRulles, {
       message: 'Please, enter a valid email!',
     })
-    .required('Required'),
+    .required('This field is required!'),
   password: Yup.string()
     .min(3, 'Password must have at least 3 characters!')
     .matches(passwordRulles, {
