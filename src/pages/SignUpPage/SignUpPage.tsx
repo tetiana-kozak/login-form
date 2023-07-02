@@ -109,7 +109,7 @@ const SignUpPage = (props: Props) => {
         <p className="account-message">
           I have an account.
           <span>
-            <Link to={'/sign-in'}>Go to Sign in</Link>
+            <Link to={'/sign-in'}> Go to Sign in</Link>
           </span>
         </p>
       </div>
