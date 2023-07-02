@@ -6,10 +6,31 @@ import TextInput from 'components/FormInputs/TextInput'
 import { Formik, Form } from 'formik'
 import PasswordInput from 'components/FormInputs/PasswordInput'
 import { SignInSchema } from 'Schemas/schemas'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
+type UserData = {
+  email: string
+  password: string
+}
+
 const SignInPage = (props: Props) => {
+  let navigate = useNavigate()
+
+  const signIn = async (values: UserData) => {
+    await axios
+      .post('https://jobs-api-06-ivan.herokuapp.com/api/v1/auth/login', values)
+      .then((response) => {
+        console.log('response login ', response)
+        if (response.data.token) {
+          localStorage.setItem('token', JSON.stringify(response.data.token))
+          navigate('/main')
+        }
+      })
+      .catch((error) => console.log('error', error))
+  }
   return (
     <div className="form-container">
       <PageTitle>Sign In</PageTitle>
@@ -23,6 +44,7 @@ const SignInPage = (props: Props) => {
           validationSchema={SignInSchema}
           onSubmit={(values) => {
             console.log(values)
+            signIn(values)
           }}
         >
           <Form>
@@ -40,9 +62,7 @@ const SignInPage = (props: Props) => {
               placeholder={'***************'}
             />
 
-            {/* <Link to={'/main'}> */}
             <Button>Sign In</Button>
-            {/* </Link> */}
           </Form>
         </Formik>
         <p className="account-message">
